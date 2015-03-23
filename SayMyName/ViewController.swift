@@ -36,7 +36,7 @@ class ViewController: UIViewController, ABPeoplePickerNavigationControllerDelega
     }
     
     @IBAction func sayContact(sender: AnyObject) {
-        var personName = "You have chosen \(forenameField.text) \(surnameField.text)."
+        var personName = String(format: NSLocalizedString("SELECTED", comment: "Selected person"), forenameField.text, surnameField.text)
         TextToSpeech.SayText(personName)
         
     }
